@@ -115,8 +115,8 @@ symbols =
     {AIM_120_,              "M"},
     {AIM_120C_,             "M"},
     {S125_SR_P_19,          "FF"},--P-19 		   - "Flat Face" radar (FF),
-    {S125_TR_SNR,           "LB"},--SNR S-125 Neva - "Low Blow" radar (LB).
-}
+    {S125_TR_SNR,           "LB"},--SNR S-125 Neva - "Low Blow" radar (LB). 
+} 
 
 symbols_strings = {
 	['MiG-19P']			= '19',
@@ -158,6 +158,14 @@ symbols_strings = {
 	['SH-60B'] = '60',
 }
 
+-- sounds for radars
+--SoundsPath = "Aircrafts/F-16C/Cockpit/RWR/"
+SoundsPath = "C:/Users/kayak/Desktop/F-16 RWR/Sounds/Effects/Aircrafts/F-16C/Cockpit/RWR"
+ DefaultGuidedSnd = SoundsPath .. "LockNewUS"
+ DefaultSearchSnd = SoundsPath .. "LockNewUS"
+ DefaultOnboardSnd = SoundsPath .. "LockNewUS"
+ DefaultCannonSnd = SoundsPath .. "LockNewUS"
+
 acquisition_sounds = 
 {
     {EWR_1L13_,             DefaultSearchSnd},
@@ -178,8 +186,8 @@ acquisition_sounds =
     {Hawk_TR_ANMPQ_46,      DefaultSearchSnd},
     {S300V_9A82_,           DefaultSearchSnd},
     {S300V_9A83,            DefaultSearchSnd},
-    {Buk_LN_9A310M1,        DefaultSearchSnd},
-    {BUK_LL_,               DefaultSearchSnd},
+    {Buk_LN_9A310M1,         SoundsPath .. "SA-11Lock"},
+    {BUK_LL_,                SoundsPath .. "SA-11Lock"},
     {Osa_9A33,              DefaultSearchSnd},
     {Tor_9A331,             DefaultSearchSnd},
     {Roland_ADS,            DefaultSearchSnd},
@@ -205,7 +213,7 @@ lock_sounds =
     {Buk_SR_9S18M1,         SoundsPath .. "SnowDrift"},
     {Kub_STR_9S91,          SoundsPath .. "SA-6Lock"},
     {Dog_Ear,               SoundsPath .. "DogEar"},
-    {Roland_rdr,           DefaultLockSnd},
+    {Roland_rdr,            DefaultLockSnd},
     {Patriot_STR_ANMPQ_53,  SoundsPath .. "PatriotLock"},
     {Hawk_SR_ANMPQ_50,      SoundsPath .. "HawkSearchLock"},
     {S300PS_TR_30N6,        DefaultLockSnd},
@@ -229,13 +237,6 @@ lock_sounds =
 }
 
 
--- sounds for radars
--- SoundsPath = "Aircrafts/F-16C/Cockpit/RWR/"
-SoundsPath = "C:/Users/kayak/Desktop/F-16 RWR/Sounds/Effects/Aircrafts/F-16C/Cockpit/RWR"
--- DefaultGuidedSnd = SoundsPath .. "750Hz"
--- DefaultSearchSnd = SoundsPath .. "1500Hz"
--- DefaultOnboardSnd = SoundsPath .. "1744Hz"
--- DefaultCannonSnd = SoundsPath .. "1974Hz"
 
 -- RWR sensors: F-16C has four sensors - 2 on nose and 2 in tail
 eyes ={}
